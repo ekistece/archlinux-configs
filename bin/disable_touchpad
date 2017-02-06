@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ "$(xinput list | grep 'Mouse')" != "" ]; then
+	/usr/bin/xinput --disable  'ETPS/2 Elantech Touchpad'
+fi
+exit 0

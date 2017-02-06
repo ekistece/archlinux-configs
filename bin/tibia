@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Adapts library load path to include Qt libraries found in the root folder of the client's binary file.
+# client shouldn't be called directly to prevent needed libraries not being found.
+
+PATH=~/.local/share/tibia/
+BIN_PATH="$PATH/bin"
+
+LD_LIBRARY_PATH="$BIN_PATH" exec "$BIN_PATH/client"
